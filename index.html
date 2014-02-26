@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <style>
+            img{
+                width:400px;
+                height:320px;
+            }
+            #mydiv{
+                width:400px;
+                height:320px;
+            }
+
+            p{
+                text-align:center;
+                font-size:30px;
+            }
+        </style>
+        <script type="text/javascript">
+            var imgarray=["tiger.jpg","cat.jpg","dog.png","wolf.jpg","lion.jpg"];
+            var txtarray=["tiger","cat","dog","wolf","lion"];
+            var index=0;
+            function slideit()
+            {
+                index++;
+                i = index%5;
+                document.getElementById("myimg").src="img/"+imgarray[i];
+                document.getElementById("mytext").innerHTML=txtarray[i];
+            }
+
+function myload()
+{
+     setInterval("slideit()",2500);
+
+}
+
+        </script>
+</head>
+<body onload="myload()">
+    <div id="mydiv">
+    <img id ="myimg" src="img/tiger.jpg"/>
+    <p id="mytext">tiger</p>
+    </div>
+</body>
+</html>
